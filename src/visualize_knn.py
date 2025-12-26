@@ -42,8 +42,14 @@ plt.contourf(xx, yy, Z, cmap=cmap_light)
 
 # Plot training points
 for idx, class_name in enumerate(class_names):
-    plt.scatter(X[y_encoded == idx, 0], X[y_encoded == idx, 1],
-                c=[cmap_bold(idx)], label=class_name, edgecolor='k', s=60)
+    plt.scatter(
+        X[y_encoded == idx, 0], 
+        X[y_encoded == idx, 1],
+        c=[cmap_bold(idx)], 
+        label=class_name, 
+        edgecolor='k', 
+        s=60
+    )
 
 plt.xlabel('Shape')
 plt.ylabel('Color Score')
